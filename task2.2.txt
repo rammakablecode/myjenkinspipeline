@@ -1,0 +1,119 @@
+Started by user Rammaka Iddamalgoda
+
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins
+ in C:\ProgramData\Jenkins\.jenkins\workspace\JenkinsEmail
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] git
+Selected Git installation does not exist. Using Default
+The recommended git tool is: NONE
+No credentials specified
+ > C:\Program Files\Git\cmd\git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\JenkinsEmail\.git # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\cmd\git.exe config remote.origin.url https://github.com/rammakablecode/myjenkinspipeline # timeout=10
+Fetching upstream changes from https://github.com/rammakablecode/myjenkinspipeline
+ > C:\Program Files\Git\cmd\git.exe --version # timeout=10
+ > git --version # 'git version 2.49.0.windows.1'
+ > C:\Program Files\Git\cmd\git.exe fetch --tags --force --progress -- https://github.com/rammakablecode/myjenkinspipeline +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > C:\Program Files\Git\cmd\git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision 510142b3b4176718f94409b9b4c50919971c2b74 (refs/remotes/origin/main)
+ > C:\Program Files\Git\cmd\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\cmd\git.exe checkout -f 510142b3b4176718f94409b9b4c50919971c2b74 # timeout=10
+ > C:\Program Files\Git\cmd\git.exe branch -a -v --no-abbrev # timeout=10
+ > C:\Program Files\Git\cmd\git.exe branch -D main # timeout=10
+ > C:\Program Files\Git\cmd\git.exe checkout -b main 510142b3b4176718f94409b9b4c50919971c2b74 # timeout=10
+Commit message: "Add files via upload"
+ > C:\Program Files\Git\cmd\git.exe rev-list --no-walk e2b389dd31492beebb0569515269b129db7c1039 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Build)
+[Pipeline] echo
+Stage 1: Build - Using Maven to compile and package code.
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\JenkinsEmail>echo Simulating Maven build... 
+Simulating Maven build...
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Unit and Integration Tests)
+[Pipeline] echo
+Stage 2: Testing - Running JUnit for unit tests and TestNG for integration tests.
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\JenkinsEmail>echo Simulating unit and integration tests... 
+Simulating unit and integration tests...
+Post stage
+[Pipeline] emailext
+Request made to compress build log
+Sending email to: rammaka.aaron@gmail.com
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Code Analysis)
+[Pipeline] echo
+Stage 3: Code Analysis - Using SonarQube to analyze code quality.
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\JenkinsEmail>echo Simulating SonarQube analysis... 
+Simulating SonarQube analysis...
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Security Scan)
+[Pipeline] echo
+Stage 4: Security Scan - Simulating npm audit (Snyk or OWASP DC).
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\JenkinsEmail>echo Simulating npm audit security scan... 
+Simulating npm audit security scan...
+Post stage
+[Pipeline] emailext
+Request made to compress build log
+Sending email to: rammaka.aaron@gmail.com
+
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy to Staging)
+[Pipeline] echo
+Stage 5: Deploy to Staging - Simulating Ansible deployment to AWS EC2.
+[Pipeline] bat
+
+
+C:\ProgramData\Jenkins\.jenkins\workspace\JenkinsEmail>echo Simulating staging deployment... 
+Simulating staging deployment...
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Integration Tests on Staging)
+[Pipeline] echo
+Stage 6: Integration Tests - Simulating Postman/Newman API tests.
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\JenkinsEmail>echo Simulating Newman tests... 
+Simulating Newman tests...
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Deploy to Production)
+[Pipeline] echo
+Stage 7: Deploy to Production - Final production deployment.
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\JenkinsEmail>echo Simulating production deployment... 
+Simulating production deployment...
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

@@ -1,30 +1,28 @@
-Started by user Rammaka Iddamalgoda
+Started by an SCM change
 Lightweight checkout support not available, falling back to full checkout.
 Checking out git https://github.com/rammakablecode/myjenkinspipeline into C:\ProgramData\Jenkins\.jenkins\workspace\myjenkinspipeline@script\e966eb9d244f113763caa88a0d3429df8260ecd64bb7e50f8e50985919af3ef4 to read Jenkinsfile
 Selected Git installation does not exist. Using Default
 The recommended git tool is: NONE
 No credentials specified
-Cloning the remote Git repository
-Cloning repository https://github.com/rammakablecode/myjenkinspipeline
- > C:\Program Files\Git\cmd\git.exe init C:\ProgramData\Jenkins\.jenkins\workspace\myjenkinspipeline@script\e966eb9d244f113763caa88a0d3429df8260ecd64bb7e50f8e50985919af3ef4 # timeout=10
+ > C:\Program Files\Git\cmd\git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\myjenkinspipeline@script\e966eb9d244f113763caa88a0d3429df8260ecd64bb7e50f8e50985919af3ef4\.git # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\cmd\git.exe config remote.origin.url https://github.com/rammakablecode/myjenkinspipeline # timeout=10
 Fetching upstream changes from https://github.com/rammakablecode/myjenkinspipeline
  > C:\Program Files\Git\cmd\git.exe --version # timeout=10
  > git --version # 'git version 2.49.0.windows.1'
  > C:\Program Files\Git\cmd\git.exe fetch --tags --force --progress -- https://github.com/rammakablecode/myjenkinspipeline +refs/heads/*:refs/remotes/origin/* # timeout=10
- > C:\Program Files\Git\cmd\git.exe config remote.origin.url https://github.com/rammakablecode/myjenkinspipeline # timeout=10
- > C:\Program Files\Git\cmd\git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
-Avoid second fetch
 Seen branch in repository origin/main
 Seen 1 remote branch
  > C:\Program Files\Git\cmd\git.exe show-ref --tags -d # timeout=10
-Checking out Revision bee4ef0d6e4416770ae314d39f8c36aa5bc622d0 (origin/main)
+Checking out Revision e2b389dd31492beebb0569515269b129db7c1039 (origin/main)
  > C:\Program Files\Git\cmd\git.exe config core.sparsecheckout # timeout=10
- > C:\Program Files\Git\cmd\git.exe checkout -f bee4ef0d6e4416770ae314d39f8c36aa5bc622d0 # timeout=10
-Commit message: "Add Jenkinsfile to define pipeline"
-First time build. Skipping changelog.
+ > C:\Program Files\Git\cmd\git.exe checkout -f e2b389dd31492beebb0569515269b129db7c1039 # timeout=10
+Commit message: "Add files via upload"
+ > C:\Program Files\Git\cmd\git.exe rev-list --no-walk 2aa5880942866c5753979a032c4ef8eb5d46ab1f # timeout=10
 [Pipeline] Start of Pipeline
 [Pipeline] node
-Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\myjenkinspipeline
+Running on Jenkins
+ in C:\ProgramData\Jenkins\.jenkins\workspace\myjenkinspipeline
 [Pipeline] {
 [Pipeline] stage
 [Pipeline] { (Declarative: Checkout SCM)
@@ -32,23 +30,20 @@ Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\myjenkinspipelin
 Selected Git installation does not exist. Using Default
 The recommended git tool is: NONE
 No credentials specified
-Cloning the remote Git repository
-Cloning repository https://github.com/rammakablecode/myjenkinspipeline
- > C:\Program Files\Git\cmd\git.exe init C:\ProgramData\Jenkins\.jenkins\workspace\myjenkinspipeline # timeout=10
+ > C:\Program Files\Git\cmd\git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\myjenkinspipeline\.git # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\cmd\git.exe config remote.origin.url https://github.com/rammakablecode/myjenkinspipeline # timeout=10
 Fetching upstream changes from https://github.com/rammakablecode/myjenkinspipeline
  > C:\Program Files\Git\cmd\git.exe --version # timeout=10
  > git --version # 'git version 2.49.0.windows.1'
  > C:\Program Files\Git\cmd\git.exe fetch --tags --force --progress -- https://github.com/rammakablecode/myjenkinspipeline +refs/heads/*:refs/remotes/origin/* # timeout=10
- > C:\Program Files\Git\cmd\git.exe config remote.origin.url https://github.com/rammakablecode/myjenkinspipeline # timeout=10
- > C:\Program Files\Git\cmd\git.exe config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
-Avoid second fetch
 Seen branch in repository origin/main
 Seen 1 remote branch
  > C:\Program Files\Git\cmd\git.exe show-ref --tags -d # timeout=10
-Checking out Revision bee4ef0d6e4416770ae314d39f8c36aa5bc622d0 (origin/main)
+Checking out Revision e2b389dd31492beebb0569515269b129db7c1039 (origin/main)
  > C:\Program Files\Git\cmd\git.exe config core.sparsecheckout # timeout=10
- > C:\Program Files\Git\cmd\git.exe checkout -f bee4ef0d6e4416770ae314d39f8c36aa5bc622d0 # timeout=10
-Commit message: "Add Jenkinsfile to define pipeline"
+ > C:\Program Files\Git\cmd\git.exe checkout -f e2b389dd31492beebb0569515269b129db7c1039 # timeout=10
+Commit message: "Add files via upload"
 [Pipeline] }
 [Pipeline] // stage
 [Pipeline] withEnv
